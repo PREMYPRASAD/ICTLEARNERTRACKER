@@ -9,6 +9,8 @@ import { LoginComponent } from './components/login/login.component';
 import { StudentslistComponent } from './components/studentslist/studentslist.component';
 import { LadingadminComponent } from './ladingadmin/ladingadmin.component';
 import { LandingtrainerComponent } from './landingtrainer/landingtrainer.component';
+import { TrainerlistComponent } from './trainerlist/trainerlist.component';
+import { PlacementofficerlistComponent } from './placementofficerlist/placementofficerlist.component';
 
 const routes: Routes = [
 
@@ -20,6 +22,8 @@ const routes: Routes = [
   {path:'studentslist',component:StudentslistComponent},
   {path:'add-students',component:AddstudentsComponent},
   {path:'edit-students',component:EditstudentsComponent},
+  {path:'trainerlist',component:TrainerlistComponent},
+  {path:'placementofficerlist',component:PlacementofficerlistComponent},
 
   // path for admin settings
   {path:'batch-list',component:BatclistComponent},

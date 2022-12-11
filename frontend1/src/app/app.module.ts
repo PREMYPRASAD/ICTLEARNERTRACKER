@@ -21,6 +21,8 @@ import { ProgramlistComponent } from './components/programlist/programlist.compo
 import { BatclistComponent } from './components/batclist/batclist.component';
 import { LandingtrainerComponent } from './landingtrainer/landingtrainer.component';
 import { LadingadminComponent } from './ladingadmin/ladingadmin.component';
+import { TrainerlistComponent } from './trainerlist/trainerlist.component';
+import { PlacementofficerlistComponent } from './placementofficerlist/placementofficerlist.component';
 
 
 
@@ -37,7 +39,9 @@ import { LadingadminComponent } from './ladingadmin/ladingadmin.component';
     ProgramlistComponent,
     BatclistComponent,
     LandingtrainerComponent,
-    LadingadminComponent
+    LadingadminComponent,
+    TrainerlistComponent,
+    PlacementofficerlistComponent
 
   ],
   imports: [
