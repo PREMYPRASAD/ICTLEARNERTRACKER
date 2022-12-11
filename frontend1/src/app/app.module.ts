@@ -23,6 +23,15 @@ import { LandingtrainerComponent } from './landingtrainer/landingtrainer.compone
 import { LadingadminComponent } from './ladingadmin/ladingadmin.component';
 import { TrainerlistComponent } from './trainerlist/trainerlist.component';
 import { PlacementofficerlistComponent } from './placementofficerlist/placementofficerlist.component';
+import { PlacementofficerListComponent } from './components/placementofficer-list/placementofficer-list.component';
+import { TrainingheadListComponent } from './components/traininghead-list/traininghead-list.component';
+import { TrainingheadLandingComponent } from './components/traininghead-landing/traininghead-landing.component';
+import { PlacementofficerLandingComponent } from './components/placementofficer-landing/placementofficer-landing.component';
+import { TrainingheadEditStudentsComponent } from './components/traininghead-edit-students/traininghead-edit-students.component';
+import { TrainingheadAddStudentsComponent } from './components/traininghead-add-students/traininghead-add-students.component';
+import { PlacementofficerEditStudentsComponent } from './components/placementofficer-edit-students/placementofficer-edit-students.component';
+import { UserAddComponent } from './components/user-add/user-add.component';
+import { UserEditComponent } from './components/user-edit/user-edit.component';
 
 
 
@@ -41,7 +50,16 @@ import { PlacementofficerlistComponent } from './placementofficerlist/placemento
     LandingtrainerComponent,
     LadingadminComponent,
     TrainerlistComponent,
-    PlacementofficerlistComponent
+    PlacementofficerlistComponent,
+    PlacementofficerListComponent,
+    TrainingheadListComponent,
+    TrainingheadLandingComponent,
+    PlacementofficerLandingComponent,
+    TrainingheadEditStudentsComponent,
+    TrainingheadAddStudentsComponent,
+    PlacementofficerEditStudentsComponent,
+    UserAddComponent,
+    UserEditComponent
 
   ],
   imports: [

@@ -1,0 +1,52 @@
+<div class="sidebar ">
+    <a  routerLink="/studentslist">Home</a>
+    <a class="active" routerLink="/taininghead-list">Trainers</a>
+    <a routerLink="/placementofficer-list">Placement Officers</a>
+</div>
+
+  <div class="content   pt-5 pb-5">
+    <h2 class="pt-5">ICTAK Learner Tracker</h2>
+    <div class="  ">
+        <div class="pt-5 pb-5">
+            <div class=" pb-5">
+                <button class="btn btn-primary" routerLink="/add-user">Add Trainers</button>
+            </div>
+
+            <div class="search-box pb-3">
+              <input type="text" class="form-control " placeholder="Search" name="search" [(ngModel)]="searchText" >
+            </div>
+
+
+            <table class="table table-hover ">
+                <thead>
+                  <tr class="table-dark">
+                    <th scope="col">Name</th>
+                    <th scope="col">email id</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">office location</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tr *ngFor="let user of users |paginate:
+                { itemsPerPage: tableSize,
+                   currentPage: page,
+                   totalItems: count
+                 } | filter: filterTerm  ">
+                  <td>{{user.user_name}}</td>
+                  <td>{{user.email_id}}</td>
+                  <td>{{user.contact_number}}</td>
+                  <td>{{user.course}}</td>
+                  <td>{{user.office_location}}</td>
+                  <th scope="col"><button class="btn btn-warning" type="button" >Edit</button></th>
+                  <th scope="col"><button class="btn btn-danger" type="button" (click)="deleteuser(user._id)" >Delete</button></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)"></pagination-controls>
+    </div>
+</div>
+            

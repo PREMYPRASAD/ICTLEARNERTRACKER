@@ -41,7 +41,7 @@ userverify(){
     else{
       alert("Staff has successfully logged in")
 
-      this.router.navigate(['/landingtrainer'])
+      this.router.navigate(['/placementofficer-landing'])
 
     }
   })

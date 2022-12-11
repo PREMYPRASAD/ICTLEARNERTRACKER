@@ -1,0 +1,102 @@
+
+  
+  <div class="content container pt-5 pb-5">
+    <div class=" pt-5">
+        
+        <h3>Add New Student</h3>
+<form [formGroup]="addstudentform" (ngSubmit)="addstudent()">
+
+
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group pt-3">
+                <input type="text" class="form-control"  name="student_name" required placeholder="Name"  formControlName="" formControlName="student_name" >
+        
+            </div>
+            <div class="form-group pt-3">
+                <input type="text" class="form-control"  name="contact_number"  required placeholder="Contact Number"  formControlName="contact_number"  >
+        
+            </div>
+            <div class="form-group pt-3">
+                <input type="text" class="form-control" name="email_id"   required placeholder="email id" formControlName="email_id"   >
+        
+            </div>
+            <div class="form-group pt-3">
+
+                <select class="form-select" aria-label="Default select example" name="course"  formControlName="course" >
+                    <option value="" selected disabled>Please select course</option>
+                    <option   *ngFor="let course of courses  let i= index" [value]="course.course_name">{{course.course_name}}</option>
+                </select>
+               
+
+                 
+            </div>
+            <div class="form-group pt-3">
+                <select class="form-select" aria-label="Default select example" name="batch"   aria-placeholder="Select Batch"formControlName="batch" >
+                    <option value="" selected disabled>Please select batch</option>
+                    <option   *ngFor="let batch of batches  let i= index" [value]="batch.batch_name">{{batch.batch_name}}</option>
+                  </select>
+            </div>
+            <div class="form-group pt-3">
+                <select class="form-select" aria-label="Default select example" name="program" formControlName="program" >
+                    <option value="" selected disabled>Please select program</option>
+                    <option   *ngFor="let program of programs  let i= index" [value]="program.program_name">{{program.program_name}}</option>
+                  </select>
+              
+            </div>
+            <div class="form-group pt-3">
+                <select class="form-select" aria-label="Default select example" name="training_head" formControlName="training_head" >
+                    <option value="" selected disabled>Select Training Head</option>
+                    <option value="Training Head 1">Training Head 1</option>
+                  </select>
+            </div>
+            <div class="form-group pt-3">
+                <select class="form-select" aria-label="Default select example" name="placement_officer" formControlName="placement_officer" >
+                    <option value="" selected disabled>Select Placement head</option>
+                    <option value="Placement Head 1">Placement Head 1</option>
+                  </select>
+                
+            </div>
+            <div class="form-group pt-3">
+                <select class="form-select" aria-label="Default select example" name="employment_status"formControlName="employment_status" >
+                    <option value="" selected disabled>Select Placement Status </option>
+                    <option value="Placed">Placed</option>
+                    <option value="JobSeeking">JobSeeking</option>
+                    <option value="NOT Interested">NOT Interested</option>
+                  </select>
+
+            </div>
+            <div class="form-group pt-3">
+
+                <select class="form-select" aria-label="Default select example" name="course_status" formControlName="course_status" >
+                    <option value="" selected disabled>Select Course Completion Status </option>
+                    <option value="Qualified">Qualified</option>
+                    <option value="Incompetent">Incompetent</option>
+                  </select>
+            </div>
+
+        </div>
+        <div class="col-6">
+
+           
+            <div class="form-group">
+                <textarea name="contact_address" class="form-control" id="" cols="30" rows="22" required placeholder="Address" formControlName="contact_address" ></textarea>
+            </div>
+
+        </div>
+      </div>
+
+
+    <div class="add pt-5" style="text-align:center">
+        <button type="submit" [disabled]="addstudentform.invalid"  class="btn btn-success">Add Student</button>
+        <button type="reset" class="btn btn-warning m-2 ">Clear</button>
+        <button type="button" class="btn btn-warning m-2 " routerLink="/studentslist">Back</button>
+    </div>
+
+</form>
+    </div>
+  
+  </div>
+
+
+
