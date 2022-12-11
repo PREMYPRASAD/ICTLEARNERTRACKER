@@ -1,0 +1,50 @@
+
+   
+   <div class="sidebar ">
+    <a class="" routerLink="/studentslist">Home</a>
+    <a routerLink="" >Trainers</a>
+    <a routerLink="">Placement Officers</a>
+  </div>
+<div class="content   pt-5 pb-5">
+    <h1 class="pt-5">program List</h1>
+    <div class="  ">
+      <div class="pt-5 pb-5">
+        <h3>Add New program</h3>
+        <form #addform="ngForm" (ngSubmit)="addProgram()" class="row g-3">
+            <div class="col-auto">
+            <input type="text" class="form-control"  name="program_name" required placeholder="program_name" [(ngModel)]="programdata.program_name">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control"  name="program_description"  required placeholder="program_description Number" [(ngModel)]="programdata.program_description" >
+            </div>
+            <div class="col-auto"><button type="submit"  class="btn btn-success">Add program</button>  <button type="reset" class="btn btn-warning m-2 ">Clear</button></div>    
+         </form>
+      </div>
+      <table class="table table-hover pb-5">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">#</th>
+            <th scope="col">program Name</th>
+            <th scope="col">program description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let program of programs  let i= index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{program.program_name}}</td>
+            <td>{{program.program_description}}</td>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <!-- <th scope="col"><button class="btn btn-warning" type="button" (click)="updatestudent(student._id)">Edit</button></th> -->
+            <th scope="col"><button class="btn btn-danger" type="button" (click)="deleteprogram(program._id)" >Delete</button></th>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+
+

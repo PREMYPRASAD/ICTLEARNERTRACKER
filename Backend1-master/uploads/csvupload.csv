@@ -1,0 +1,5 @@
+student_id,student_name,contact_number,email_id, contact_address,course,batch,program,training_head,placement_officer,employment_status,course_status,date
+FSD101,TONY,899876654,tony@gmail.com,tony villa kollam,FSD,july2022,KKEM,MRIDULA,ASWIN,not employed,qualified,9/12/2022
+FSD102,ANEESH,8456788909,aneesh@gmail.com,aneeshbhavan eklm,FSD,july2022,KKEM,MRIDULA,ASWIN,not employed,qualified,9/12/2022
+
+

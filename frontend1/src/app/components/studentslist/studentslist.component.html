@@ -1,0 +1,59 @@
+<div class="sidebar ">
+    <a class="active" routerLink="/studentslist">Home</a>
+    <a routerLink="">Trainers</a>
+    <a routerLink="">Placement Officers</a>
+</div>
+<div class="content   pt-5 pb-5">
+    <h2 class="pt-5">ICTAK Learner Tracker</h2>
+    <div class="  ">
+        <div class="pt-5 pb-5">
+            <button class="btn btn-primary" routerLink="/add-students">Add Students</button>
+        </div>
+        <div class="search-box pb-3">
+            <!-- <input type="text" class="form-control " placeholder="Search" name="search" [(ngModel)]="searchText"> -->
+            <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm" />
+
+        </div>
+        <table class="table table-hover ">
+            <thead>
+                <tr class="table-dark">
+                    <th scope="col">Student Name</th>
+                    <th scope="col">email id</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Batch</th>
+                    <th scope="col">Program</th>
+                    <th scope="col">Course Status</th>
+                    <th scope="col">Placement Status</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of students |paginate:
+              { itemsPerPage: tableSize,
+                 currentPage: page,
+                 totalItems: count
+               } | filter: filterTerm  ">
+                    <!-- <th scope="row"  let i= index  >{{i+1}}</th> -->
+                    <td>{{student.student_name}}</td>
+                    <td>{{student.contact_number}}</td>
+                    <td>{{student.phone}}</td>
+                    <td>{{student.email_id}}</td>
+                    <td>{{student.batch}}</td>
+                    <td>{{student.program}}</td>
+                    <td>{{student.course}}</td>
+                    <td>{{student.employment_status}}</td>
+                    <th scope="col"><button class="btn btn-warning" type="button" (click)="updatestudent(student._id)">Edit</button></th>
+                    <th scope="col"><button class="btn btn-danger" type="button" (click)="deletestudent(student._id)">Delete</button></th>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)"></pagination-controls>
+    </div>
+
+
+</div>

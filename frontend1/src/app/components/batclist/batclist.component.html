@@ -1,0 +1,49 @@
+
+   
+   <div class="sidebar ">
+    <a class="" routerLink="/studentslist">Home</a>
+    <a routerLink="" >Trainers</a>
+    <a routerLink="">Placement Officers</a>
+  </div>
+<div class="content   pt-5 pb-5">
+    <h1 class="pt-5">Batch List</h1>
+    <div class="  ">
+      <div class="pt-5 pb-5">
+        <h3>Add New Batch</h3>
+        <form #addform="ngForm" (ngSubmit)="addBatch()" class="row g-3">
+            <div class="col-auto">
+            <input type="text" class="form-control"  name="batch_name" required placeholder="batch_name" [(ngModel)]="batchdata.batch_name">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control"  name="batch_description"  required placeholder="batch_description Number" [(ngModel)]="batchdata.batch_description" >
+            </div>
+            <div class="col-auto"><button type="submit"  class="btn btn-success">Add Batch</button>  <button type="reset" class="btn btn-warning m-2 ">Clear</button></div>    
+         </form>
+      </div>
+      <table class="table table-hover pb-5">
+        <thead>
+          <tr class="table-dark">
+            <th scope="col">#</th>
+            <th scope="col">Batch Name</th>
+            <th scope="col">Batch description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let batch of batches  let i= index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{batch.batch_name}}</td>
+            <td>{{batch.batch_description}}</td>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <!-- <th scope="col"><button class="btn btn-warning" type="button" (click)="updatestudent(student._id)">Edit</button></th> -->
+            <th scope="col"><button class="btn btn-danger" type="button" (click)="deletebatch(batch._id)" >Delete</button></th>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+
