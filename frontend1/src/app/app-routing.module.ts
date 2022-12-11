@@ -34,8 +34,8 @@ const routes: Routes = [
   {path:'trainerlist',component:TrainerlistComponent},
   {path:'placementofficerlist',component:PlacementofficerlistComponent},
 
-  {path:'taininghead-list',component:TrainingheadListComponent},
-  {path:'placementofficer-list',component:PlacementofficerListComponent},
+  {path:'user-list',component:TrainingheadListComponent},
+  // {path:'placementofficer-list',component:PlacementofficerListComponent},
   {path:'user-add',component:UserAddComponent},
   {path:'user-edit', component:UserEditComponent},
 

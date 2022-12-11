@@ -1,7 +1,6 @@
 <div class="sidebar ">
-    <a  routerLink="/studentslist">Home</a>
-    <a class="active" routerLink="/taininghead-list">Trainers</a>
-    <a routerLink="/placementofficer-list">Placement Officers</a>
+  <a routerLink="/studentslist">Home</a>
+  <a class="active"  routerLink="/user-list">Trainers/Placement Officers</a>
 </div>
 
   <div class="content   pt-5 pb-5">
@@ -25,6 +24,7 @@
                     <th scope="col">Phone</th>
                     <th scope="col">Course</th>
                     <th scope="col">office location</th>
+                    <th scope="col">User Type</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
                   </tr>
@@ -39,6 +39,7 @@
                   <td>{{user.contact_number}}</td>
                   <td>{{user.course}}</td>
                   <td>{{user.office_location}}</td>
+                  <td>{{user.user_type}}</td>
                   <th scope="col"><button class="btn btn-warning" type="button" >Edit</button></th>
                   <th scope="col"><button class="btn btn-danger" type="button" (click)="deleteuser(user._id)" >Delete</button></th>
                 </tr>
