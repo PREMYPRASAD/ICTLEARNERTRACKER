@@ -1,0 +1,13 @@
+<div class="container">
+    <h4>Please use the <a href="./assets/template.csv" download="template.csv">template</a> to add learners.<br>
+        <span class="text-danger"><i>Note: dont remove the heading.</i></span>
+    </h4>
+    <form id="upload_form" enctype="multipart/form-data">
+        <div>
+            <label>Select file to upload:</label>
+            <input type="file" id="fileinput" accept=".csv" (change)="onSelectedFile($event)" name="csv" class="btn btn-info" data-toggle="button">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" [disabled]="isDisabled" (click)="uploadCSV()">Upload</button>
+    </form>
+</div>

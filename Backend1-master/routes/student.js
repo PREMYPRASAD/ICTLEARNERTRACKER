@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
 
 //csv upload required packages -- multer + fast-csv and streamifier - not saving file to folder
 const csvupload = require('@fast-csv/parse');
@@ -40,7 +41,7 @@ router.put('/student', studentCntrlr.updatestudent)
 router.delete('/student/:id', studentCntrlr.deletestudent)
 
 // upload csv students
-router.post('/uploadstudents', uploads.single('csv'), (req, res) => {
+router.post('/uploadlearners', uploads.single('csv'), (req, res) => {
     csv()
         .fromFile(req.file.path)
         .then((jsonObj) => {

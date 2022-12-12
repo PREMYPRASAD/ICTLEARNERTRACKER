@@ -18,6 +18,7 @@ export class TrainingheadListComponent implements OnInit {
   count: number = 0;
   tableSize: number = 6;
   filterTerm!: string;
+  i=0;
 
   constructor(private apiService: ApiService,  private router: Router, public auth: AuthService) { }
 

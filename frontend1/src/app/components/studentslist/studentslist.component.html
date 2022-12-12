@@ -4,9 +4,14 @@
 </div>
 <div class="content   pt-5 pb-5">
     <h2 class="pt-5">ICTAK Learner Tracker</h2>
+    <button style="float:right; margin-top:2vh;" (click)="showUploadCSV()">
+     <h2>file_upload</h2>   
+         Upload        
+      </button>
+    <hr>
     <div class="  ">
         <div class="pt-5 pb-5">
-            <button class="btn btn-primary" routerLink="/add-students">Add Students</button>
+            <button class="btn btn-primary" routerLink="/add-students" (click)="showAddLearner()">Add Students</button>
         </div>
         <div class="search-box pb-3">
             <!-- <input type="text" class="form-control " placeholder="Search" name="search" [(ngModel)]="searchText"> -->

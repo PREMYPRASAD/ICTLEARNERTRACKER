@@ -139,7 +139,13 @@ deleteprogram(id:any){
 //------------------------------------------  settings end points are here ------------------------------------------------- //
 
 
+uploadCSV(file:any) {
+  return this.http.post(`${this.apiUrl}/uploadlearners`, file)
+}
 
+upload(file:any) {
+  return this.http.post(`${this.apiUrl}/upload`, file)
+}
 
 
 

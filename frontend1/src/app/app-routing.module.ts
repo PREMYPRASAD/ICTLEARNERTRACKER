@@ -21,6 +21,7 @@ import { TrainingheadEditStudentsComponent } from './components/traininghead-edi
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 
+
 const routes: Routes = [
 
   { path: '', pathMatch: 'full', redirectTo: 'login' },
@@ -31,7 +32,7 @@ const routes: Routes = [
   {path:'studentslist',component:StudentslistComponent},
   {path:'add-students',component:AddstudentsComponent},
   {path:'edit-students',component:EditstudentsComponent},
-  {path:'trainerlist',component:TrainerlistComponent},
+ // {path:'trainerlist',component:TrainerlistComponent},
   {path:'placementofficerlist',component:PlacementofficerlistComponent},
 
   {path:'user-list',component:TrainingheadListComponent},

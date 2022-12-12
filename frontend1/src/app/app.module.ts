@@ -32,7 +32,9 @@ import { TrainingheadAddStudentsComponent } from './components/traininghead-add-
 import { PlacementofficerEditStudentsComponent } from './components/placementofficer-edit-students/placementofficer-edit-students.component';
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CsvfileuploadComponent } from './components/csvfileupload/csvfileupload.component';
 
 
 @NgModule({
@@ -59,7 +61,8 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     TrainingheadAddStudentsComponent,
     PlacementofficerEditStudentsComponent,
     UserAddComponent,
-    UserEditComponent
+    UserEditComponent,
+    CsvfileuploadComponent
 
   ],
   imports: [
@@ -69,7 +72,9 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    BrowserAnimationsModule,
+    MatDialogModule
 
 
   ],
