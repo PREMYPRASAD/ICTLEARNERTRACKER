@@ -36,7 +36,7 @@
                 <div class="form-group pt-3">
                     <select class="form-select" aria-label="Default select example" name="course"  formControlName="course" >
                         <option selected disabled>Please Select Course</option>
-                        <option value="course 1">Course 1</option>
+                        <option   *ngFor="let course of courses  let i= index" [value]="course.course_name">{{course.course_name}}</option>
                         <option value="Placement">Placement</option>
                     </select>
                     
