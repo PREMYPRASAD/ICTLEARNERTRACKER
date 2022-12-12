@@ -89,3 +89,7 @@ exports.deletestudent = async(req, res) => {
         console.log(error);
     }
 }
+
+
+// add csv fileinfo
+exports.addCSVLearners = async(req, res) => {}

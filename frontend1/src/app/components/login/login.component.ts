@@ -41,7 +41,11 @@ userverify(){
     else{
       alert("Staff has successfully logged in")
 
+<<<<<<< HEAD
       this.router.navigate(['/placementofficer-landing'])
+=======
+      this.router.navigate(['/studentslist'])
+>>>>>>> fe142c6 (csv initiate)
 
     }
   })
