@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
+
 
 @Component({
   selector: 'app-batclist',
@@ -23,7 +25,11 @@ export class BatclistComponent implements OnInit {
   ngOnInit(): void {
     this.getbatchData();
   }
+  batchadd:  any =  new FormGroup({
+    batch_name : new FormControl(""),
+    batch_description: new FormControl(""),
 
+  })
 
 // FUNCTION FOR ADDING BATCH DATA
 

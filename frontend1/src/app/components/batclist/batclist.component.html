@@ -1,23 +1,22 @@
 
    
 <div class="sidebar ">
-  <a routerLink="/studentslist">Home</a>
-  <a routerLink="/taininghead-list">Trainers</a>
-  <a routerLink="/placementofficer-list">Placement Officers</a>
+  <a  routerLink="/studentslist">Home</a>
+  <a routerLink="/user-list">Trainers/Placement Officers</a>
 </div>
 <div class="content   pt-5 pb-5">
     <h1 class="pt-5">Batch List</h1>
     <div class="  ">
       <div class="pt-5 pb-5">
         <h3>Add New Batch</h3>
-        <form #addform="ngForm" (ngSubmit)="addBatch()" class="row g-3">
+        <form #addform="ngForm" [formGroup]="batchadd" (ngSubmit)="addBatch()" class="row g-3">
             <div class="col-auto">
-            <input type="text" class="form-control"  name="batch_name" required placeholder="batch_name" [(ngModel)]="batchdata.batch_name">
+            <input type="text" class="form-control"  name="batch_name" required placeholder="batch name" [(ngModel)]="batchdata.batch_name">
             </div>
             <div class="col-auto">
-                <input type="text" class="form-control"  name="batch_description"  required placeholder="batch_description Number" [(ngModel)]="batchdata.batch_description" >
+                <input type="text" class="form-control"  name="batch_description"  required placeholder="batch description" [(ngModel)]="batchdata.batch_description" >
             </div>
-            <div class="col-auto"><button type="submit"  class="btn btn-success">Add Batch</button>  <button type="reset" class="btn btn-warning m-2 ">Clear</button></div>    
+            <div class="col-auto"><button type="submit"  class="btn btn-success" [disabled]="batchadd.invalid"  >Add Batch</button>  <button type="reset" class="btn btn-warning m-2 ">Clear</button></div>    
          </form>
       </div>
       <table class="table table-hover pb-5">

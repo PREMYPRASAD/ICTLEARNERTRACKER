@@ -1,3 +1,39 @@
+<nav class="navbar navbar-dark bg-black navbar-expand-lg fixed-top shadow-sm">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" >ICTAK Learner Tracker</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+
+        </ul>
+        
+        
+        
+        <div class="d-flex" >
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              User-Name
+            </button>
+            <ul class="dropdown-menu">
+              <!-- <li><a class="dropdown-item" routerLink="batch-list" >Batchs</a></li>
+              <li><a class="dropdown-item" routerLink="course-list" >Courses</a></li>
+              <li><a class="dropdown-item" routerLink="program-list" >Programs</a></li>
+              <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" routerLink="/login">log-out</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+
 <div class="sidebar ">
     <a class="active" routerLink="/placementofficer-landing">Home</a>
 </div>
@@ -11,7 +47,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group pt-3">
-                        <input type="text" class="form-control" required placeholder="Name"  formControlName="student_name" value="student_name" [disabled]="true">
+                        <input type="text" class="form-control" required placeholder="Name"  formControlName="student_name" value="student_name" >
                     </div>
                     <div class="form-group pt-3">
                         <input type="" class="form-control" required placeholder="Contact Number" formControlName="contact_number">
@@ -61,22 +97,23 @@
                   </select>
 
                     </div>
-                    <div class="form-group pt-3">
-                        <select class="form-select" aria-label="Default select example" formControlName="employment_status">
-                    <option value="" selected disabled>Please select course</option>
-                    <option value="Placed">Placed</option>
-                    <option value="JobSeeking">JobSeeking</option>
-                    <option value="NOT Interested">NOT Interested</option>
-                  </select>
 
-                    </div>
                     <div class="form-group pt-3">
 
                         <select class="form-select" aria-label="Default select example" formControlName="course_status">
-                    <option value="" selected disabled>Please select course</option>
-                    <option value="Qualified">Qualified</option>
-                    <option value="Incompetent">Incompetent</option>
-                  </select>
+                            <option value="" selected disabled>Please select course</option>
+                            <option value="Qualified">Qualified</option>
+                            <option value="Incompetent">Incompetent</option>
+                        </select>
+                    </div>
+                    <div class="form-group pt-3">
+                    <select class="form-select" aria-label="Default select example" formControlName="employment_status">
+                        <option value="" selected disabled>Please select course</option>
+                        <option value="Placed">Placed</option>
+                        <option value="JobSeeking">JobSeeking</option>
+                        <option value="NOT Interested">NOT Interested</option>
+                    </select>
+
                     </div>
 
                 </div>

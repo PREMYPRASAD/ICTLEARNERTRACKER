@@ -53,17 +53,19 @@ export class PlacementofficerEditStudentsComponent implements OnInit {
     }
 
     updatestudentform: any = new FormGroup({
-      student_name: new FormControl("", [Validators.required, Validators.minLength(5)]),
-      contact_number: new FormControl("", [Validators.required, Validators.minLength(5), Validators.maxLength(10)]),
-      email_id: new FormControl("", [Validators.required, Validators.minLength(5)]),
-      contact_address: new FormControl("", [Validators.required, Validators.minLength(5)]),
-      course: new FormControl("", [Validators.required]),
-      batch: new FormControl("", [Validators.required]),
-      program: new FormControl("", [Validators.required]),
-      training_head: new FormControl("", [Validators.required]),
-      placement_officer: new FormControl("", [Validators.required]),
+      student_name: new FormControl({ value: '', disabled: true }, [Validators.required, Validators.minLength(5)], ),
+      contact_number: new FormControl({ value: '', disabled: true }, [Validators.required, Validators.minLength(5), Validators.maxLength(10)]),
+      email_id: new FormControl({ value: '', disabled: true }, [Validators.required, Validators.minLength(5)]),
+      contact_address: new FormControl({ value: '', disabled: true }, [Validators.required, Validators.minLength(5)]),
+      course: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      batch: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      program: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      training_head: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      placement_officer: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      course_status: new FormControl({ value: '', disabled: true }, [Validators.required]),
+      // no disbale for employment status 
       employment_status: new FormControl("", [Validators.required]),
-      course_status: new FormControl("", [Validators.required]),
+
     })
 
     setoldvalue() {
@@ -93,7 +95,7 @@ export class PlacementofficerEditStudentsComponent implements OnInit {
       console.log(this.updatestudentform.value,this._id)
       // this.blogerDatas = res;
       console.log("incoming data from update form ",this.updatestudentform.value,this._id );
-    this.router.navigate(['/studentslist']);
+    this.router.navigate(['/placementofficer-landing']);
     });
   }
 

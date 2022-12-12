@@ -39,11 +39,11 @@ export class PlacementofficerLandingComponent implements OnInit {
     this.router.navigate(['/placementofficer-edit-students']);
   }
 
-  deletestudent(id:any){
-    this.apiService.deletestudent(id).subscribe(res=>{
-      this.getstudentData()
-    })
-  }
+  // deletestudent(id:any){
+  //   this.apiService.deletestudent(id).subscribe(res=>{
+  //     this.getstudentData()
+  //   })
+  // }
   onTableDataChange(event: any) {
     this.page = event;
     this.getstudentData();

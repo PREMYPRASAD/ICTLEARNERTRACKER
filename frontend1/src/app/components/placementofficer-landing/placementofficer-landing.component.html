@@ -1,3 +1,42 @@
+<nav class="navbar navbar-dark bg-black navbar-expand-lg fixed-top shadow-sm">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" >ICTAK Learner Tracker</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+
+        </ul>
+        
+        
+        
+        <div class="d-flex" >
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              User-Name
+            </button>
+            <ul class="dropdown-menu">
+              <!-- <li><a class="dropdown-item" routerLink="batch-list" >Batchs</a></li>
+              <li><a class="dropdown-item" routerLink="course-list" >Courses</a></li>
+              <li><a class="dropdown-item" routerLink="program-list" >Programs</a></li>
+              <li><hr class="dropdown-divider"></li> -->
+              <li><a class="dropdown-item" routerLink="/login">log-out</a></li>
+
+
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+
+
+  
+
 <div class="sidebar ">
     <a class="active" routerLink="/placementofficer-landing">Home</a>
 </div>
@@ -42,8 +81,8 @@
                     <td>{{student.program}}</td>
                     <td>{{student.course}}</td>
                     <td>{{student.employment_status}}</td>
-                    <th scope="col"><button class="btn btn-warning" type="button" (click)="updatestudent(student._id)">Edit</button></th>
-                    <th scope="col"><button class="btn btn-danger" type="button" (click)="deletestudent(student._id)">Delete</button></th>
+                    <th scope="col"><button class="btn btn-warning" type="button" (click)="updatestudent(student._id)">Change placement Status</button></th>
+                    <!-- <th scope="col"><button class="btn btn-danger" type="button" (click)="deletestudent(student._id)">Delete</button></th> -->
                 </tr>
 
             </tbody>
