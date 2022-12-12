@@ -24,7 +24,7 @@ export class UserAddComponent implements OnInit {
   }
 
   adduserform: any=  new FormGroup({
-    username: new FormControl('', Validators.required),
+    user_name: new FormControl('', Validators.required),
     contact_number: new FormControl("", [Validators.required, Validators.minLength(5)]),
     email_id: new FormControl("", [Validators.required, Validators.minLength(5)]),
     password: new FormControl("", [Validators.required]),
@@ -48,6 +48,8 @@ export class UserAddComponent implements OnInit {
     this.apiService.addnewuser(this.adduserform.value).subscribe(res => {
       if (res) {
         alert("Data saved successfully");
+        this.router.navigate(['/user-list'])
+
         // console.log("incoming data from addbook", this.addbookform.value);
       }
       else{

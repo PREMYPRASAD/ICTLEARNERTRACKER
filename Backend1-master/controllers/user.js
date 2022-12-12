@@ -55,12 +55,12 @@ exports.updateUser = async(req, res) => {
     try {
         let id = req.body._id;
         let user = {
-            user_name: req.body.user_name,
-            email_id: req.body.email_id,
-            password: req.body.password,
-            user_type: req.body.user_type,
-            contact_number: req.body.contact_number,
-            office_location: req.body.office_location,
+            user_name: req.body.data.user_name,
+            email_id: req.body.data.email_id,
+            password: req.body.data.password,
+            user_type: req.body.data.user_type,
+            contact_number: req.body.data.contact_number,
+            office_location: req.body.data.office_location,
             course: req.body.course
         }
         let updateInfo = await userInfo.findByIdAndUpdate({ '_id': id }, { $set: user });

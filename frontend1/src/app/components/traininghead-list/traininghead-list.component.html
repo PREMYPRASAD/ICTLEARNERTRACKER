@@ -8,7 +8,7 @@
     <div class="  ">
         <div class="pt-5 pb-5">
             <div class=" pb-5">
-                <button class="btn btn-primary" routerLink="/add-user">Add Trainers</button>
+                <button class="btn btn-primary" routerLink="/user-add">Add Trainers</button>
             </div>
 
             <div class="search-box pb-3">
@@ -40,7 +40,7 @@
                   <td>{{user.course}}</td>
                   <td>{{user.office_location}}</td>
                   <td>{{user.user_type}}</td>
-                  <th scope="col"><button class="btn btn-warning" type="button" >Edit</button></th>
+                  <th scope="col"><button class="btn btn-warning" type="button" (click)="edituser(user._id)" >Edit</button></th>
                   <th scope="col"><button class="btn btn-danger" type="button" (click)="deleteuser(user._id)" >Delete</button></th>
                 </tr>
             </table>

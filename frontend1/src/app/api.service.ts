@@ -58,7 +58,7 @@ getuserdetails(id:any){
   return this.http.get(`${this.apiUrl}/user/${id}`);
 }
 
-updateuserdetails(data:any){
+updateuserdetails(data: any, _id: any){
   return this.http.put(`${this.apiUrl}/user`,data);
 }
 

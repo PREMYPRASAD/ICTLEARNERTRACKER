@@ -32,6 +32,12 @@ export class TrainingheadListComponent implements OnInit {
     })
   }
 
+  edituser(_id: any) {
+    console.log(_id)
+    this.apiService.formupdate = _id;
+    console.log(_id)
+    this.router.navigate(['/user-edit']);
+  }
   
   deleteuser(id:any){
     this.apiService.deleteuserDetails(id).subscribe(res=>{
